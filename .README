@@ -1,0 +1,30 @@
+Edge Cases and Security Considerations
+Edge Cases:
+
+Invalid coin denomination.
+Insufficient deposit for purchase.
+Not enough stock for a product.
+Prevent buyers from buying non-existent products.
+Security Considerations:
+
+JWT expiration: Tokens are short-lived (1 hour) to reduce security risks.
+Session control: Each active session is tracked in activeSessions for better control of login and logout processes.
+Password hashing: Passwords are hashed using bcryptjs before storing in the database.
+
+-----
+
+Edge Cases:
+
+Deposit:
+Ensure only valid coins are accepted.
+Test deposits with empty arrays or invalid coins.
+Buy:
+Ensure the buyer has enough deposit for the purchase.
+Test insufficient stock and invalid product IDs.
+User Registration:
+Ensure users cannot register with duplicate usernames.
+Ensure users cannot register without a valid role.
+Test Validation:
+
+After running the tests, ensure that each test passes and correctly covers the expected behaviors.
+If any tests fail, inspect the test output to debug the issue.
